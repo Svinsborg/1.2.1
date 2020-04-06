@@ -5,4 +5,6 @@
     <string name="emailUser">Электронная почта</string>
     <string name="ok">Ok</string>
     <string name="clear">Очистить</string>
+    <string name="msg">Подписка на рассылку успешно оформлена, %1$s  для пользователя, %2$s  электронный адрес</string>
+
 </resources>

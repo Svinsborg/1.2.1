@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button butOk =  findViewById(R.id.butOk);
-        Button butClr = findViewById(R.id.butClr);
+        final Button butOk =  findViewById(R.id.butOk);
+        final Button butClr = findViewById(R.id.butClr);
 
         final EditText userName = findViewById(R.id.inUser);
         final EditText userEmail = findViewById(R.id.inEmail);
@@ -33,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                result.setText("Подписка на рассылку успешно оформлена для пользователя " + userName.getText() + " электронный адрес " + userEmail.getText());
+        String text = getString(R.string.msg, userName.getText(), userEmail.getText());
+                result.setText(text);
 /*                getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);*/
                 InputMethodManager imm = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
                 imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
